@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.am24.authentication"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.am24.authentication"
