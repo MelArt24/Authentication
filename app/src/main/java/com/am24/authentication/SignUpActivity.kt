@@ -1,5 +1,6 @@
 package com.am24.authentication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.am24.authentication.databinding.ActivitySignUpBinding
@@ -13,5 +14,10 @@ class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.title = "Sign Up"
+
+        binding.loginTV.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
     }
 }

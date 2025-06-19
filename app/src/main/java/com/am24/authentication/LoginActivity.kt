@@ -12,6 +12,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.title = "Login"
+        supportActionBar?.title = "Sign Up"
     }
 }
