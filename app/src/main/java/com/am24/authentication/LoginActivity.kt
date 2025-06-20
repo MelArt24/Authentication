@@ -17,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
         supportActionBar?.title = "Sign Up"
 
         binding.signupTV.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, SignUpActivity::class.java))
             finish()
         }
 
