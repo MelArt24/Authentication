@@ -32,8 +32,10 @@ class SignUpActivity : AppCompatActivity() {
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
         binding.googleBtn.setOnClickListener {
-            val signInIntent = googleSignInClient.signInIntent
-            startActivityForResult(signInIntent, RC_SIGN_IN)
+            googleSignInClient.signOut().addOnCompleteListener {
+                val signInIntent = googleSignInClient.signInIntent
+                startActivityForResult(signInIntent, RC_SIGN_IN)
+            }
         }
 
         binding.loginTV.setOnClickListener {
@@ -46,7 +48,7 @@ class SignUpActivity : AppCompatActivity() {
             val password = binding.passwordSignUp.text.toString()
 
             if(email.isNotEmpty() && password.isNotEmpty()) {
-                MainActivity.authantication.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
+                authantication.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                     if(it.isSuccessful) {
                         startActivity(Intent(this, LoginActivity::class.java))
                     }
@@ -83,5 +85,4 @@ class SignUpActivity : AppCompatActivity() {
                 }
             }
     }
-
 }
