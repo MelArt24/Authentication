@@ -47,7 +47,7 @@ git clone https://github.com/MelArt24/Authentication.git
 3. Set up WEB_CLIENT_ID in your local.properties or BuildConfig
 The value should be taken from:
 
-Firebase Console → Project Settings → General → Web client ID
+    Firebase Console → Project Settings → General → Web client ID
 
 4. Build & Run
 - Open the project in Android Studio
