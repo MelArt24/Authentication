@@ -38,8 +38,25 @@ git clone https://github.com/MelArt24/Authentication.git
 ```
 
 2. Set up Firebase
-- Go to Firebase Console
+- Go to [Firebase Console](https://console.firebase.google.com/)
 - Create a new Firebase project
 - Add your Android app and download the google-services.json file
 - Place it in the /app directory
 - Enable Email/Password and Google sign-in methods in Firebase → Authentication → Sign-in method
+
+3. Set up WEB_CLIENT_ID in your local.properties or BuildConfig
+The value should be taken from:
+Firebase Console → Project Settings → General → Web client ID
+
+4. Build & Run
+- Open the project in Android Studio
+- Sync Gradle
+- Run the app on emulator or real device with a Google account configured
+
+## 🔄 Notes
+- Google Sign-In uses FirebaseAuth under the hood
+- Make sure the device/emulator has Google Play Services
+- Logout functionality is implemented via FirebaseAuth’s signOut()
+
+## 🧑‍💻 Author
+- [MelArt24](https://github.com/MelArt24)
